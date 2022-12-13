@@ -27,3 +27,5 @@ print('\n'*(h//2-5))
 data = range(69)
 for _ in tqdm.tqdm(data):
     time.sleep(0.25)
+
+os.system('clear')
