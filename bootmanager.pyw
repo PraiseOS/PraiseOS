@@ -25,8 +25,9 @@ for i in installations:
         sp.append('')
     large_i[installations.index(i)] = i.split(' ')[0]
 
+for i in installations:
+    installations[installations.index(i)] += sp[installations[installations.index(i)]]
+
 installations[large_i.index(max(large_i))] = installations[large_i.index(max(large_i))] + sp[large_i.index(max(large_i))] + ' - Recommended'
-
-
 
 TerminalMenu(installations).show() 
