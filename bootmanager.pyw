@@ -34,4 +34,4 @@ choice = installations[TerminalMenu(installations).show()].replace(' - Recommend
 
 print(choice)
 
-os.system(f'python3 installations/{choice}/bootloader.pyw')
+os.system(f'python3 "installations/{choice}/bootloader.pyw"')
