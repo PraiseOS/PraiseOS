@@ -15,4 +15,6 @@ print('\n\nРⷬrͬaͣiͥs͛eͤOͦS͛ Login Page\n')
 
 print('(HELP): (Use UP and DOWN keys to make a selection. \n Once you are ready, press ENTER to finalise your choice)\n')
 
-TerminalMenu(os.listdir('../../global/users')).show()
+choice = TerminalMenu(os.listdir('../../global/users')).show()
+
+with open(f'../../global/users/{choice}')
