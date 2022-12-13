@@ -34,4 +34,6 @@ choice = installations[TerminalMenu(installations).show()].replace(' - Recommend
 
 os.system('clear')
 
-os.system(f'python3 "installations/{choice}/bootloader.pyw"')
+os.chdir(os.getcwd()+f"/installations/{choice}/")
+
+os.system(f'python3 "bootloader.pyw"')
