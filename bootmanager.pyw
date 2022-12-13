@@ -32,6 +32,6 @@ installations[large_i.index(max(large_i))] = installations[large_i.index(max(lar
 
 choice = installations[TerminalMenu(installations).show()].replace(' - Recommended', '')
 
-print(choice)
+os.system('clear')
 
 os.system(f'python3 "installations/{choice}/bootloader.pyw"')
