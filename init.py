@@ -1,4 +1,4 @@
-import os
+import os, time, random
 
 from colorama import Fore, init
 
@@ -51,5 +51,7 @@ def fancyboot():
 init()
 
 fancyboot()
+
+time.sleep(1)
 
 os.system('python3 bootscreen.pyw')
