@@ -34,6 +34,7 @@ targets = [
     'O Started udev Kernel Device Manager.',
     'O Found device Samsung_SSD_850_PRO_512GB SYSTEM.',
     '# Mounting /boot...',
+    '# Hello Youtube!'
 ]
 
 def fancyboot():
@@ -51,6 +52,8 @@ def fancyboot():
 init()
 
 fancyboot()
+
+del targets
 
 time.sleep(1)
 
