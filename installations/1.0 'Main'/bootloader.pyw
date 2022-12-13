@@ -11,7 +11,7 @@ console = Console()
 
 def cprint(rgb=(255,255,255), text=""):
     console.print((' '*((w//2)-len(text)//2)+text), style=f"rgb({rgb[0]},{rgb[1]},{rgb[2]})")
-    time.sleep(.5)
+    time.sleep(.2)
 
 print('\n'*(h//2-4))
 
