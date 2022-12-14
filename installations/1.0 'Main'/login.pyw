@@ -50,3 +50,5 @@ while True:
         print('Incorrect Password')
         time.sleep(2)
         tries += 1
+
+os.system('python3 home.py')
