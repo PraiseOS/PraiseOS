@@ -22,7 +22,7 @@ users.append('Create New')
 urname = users[TerminalMenu(users).show()]
 
 if urname == 'Create New':
-    os.system('python3 setup.pyw')
+    utils.exec('setup.pyw')
     sys.exit()
 
 with open(f'../../global/users/{urname}/.pass') as f:
@@ -59,4 +59,4 @@ while True:
         time.sleep(2)
         tries += 1
 
-os.system('python3 home.py')
+utils.exec('home.py')

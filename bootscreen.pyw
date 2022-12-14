@@ -33,4 +33,4 @@ time.sleep(1)
 
 utils.clear()
 
-os.system('python3 bootmanager.pyw')
+utils.exec('bootmanager.pyw')

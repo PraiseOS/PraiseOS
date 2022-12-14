@@ -28,4 +28,4 @@ data = range(69)
 for _ in tqdm.tqdm(data):
     time.sleep(0.25)
 
-os.system('python3 login.pyw')
+utils.exec('login.pyw')

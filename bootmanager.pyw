@@ -36,4 +36,4 @@ utils.clear()
 
 os.chdir(os.getcwd()+f"/installations/{choice}/")
 
-os.system(f'python3 "bootloader.pyw"')
+utils.exec(f'python3 "bootloader.pyw"')

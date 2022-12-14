@@ -1,4 +1,4 @@
 @echo off
 
-python -m pip install -r requirements.txt
-python setup.py
+py -m pip install -r requirements.txt
+py setup.py

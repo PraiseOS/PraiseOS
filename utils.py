@@ -8,9 +8,6 @@ def clear():
 
 def exec(file):
     if os.name == 'nt':
-        try:
-            os.system(f'py {file}')
-        except:
-            os.system(f'python {file}')
+        os.system(f'py {file}')
     else:
         os.system(f'python3 {file}')
