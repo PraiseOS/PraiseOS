@@ -1,9 +1,9 @@
 from rich import *
 from rich.console import Console
 
-import os, time, tqdm
+import os, time, tqdm, utils
 
-os.system('clear')
+utils.clear()
 
 w, h = os.get_terminal_size()
 

@@ -3,9 +3,9 @@ import getpass, hashlib
 from simple_term_menu import TerminalMenu
 from art import tprint
 
-import os, time
+import os, time, utils
 
-os.system('clear')
+utils.clear()
 
 tprint('PraiseOS')
 
@@ -23,7 +23,7 @@ with open(f'../../global/users/{urname}/.pass') as f:
 tries = 0
 
 while True:
-    os.system('clear')
+    utils.clear()
 
     tprint('PraiseOS')
 
@@ -40,13 +40,13 @@ while True:
     if encpass == paswrd:
         break
     elif tries == 3:
-        os.system('clear')
+        utils.clear()
         for i in range(0,15):
             print(f'NO TRIES LEFT WAIT {15-i} MORE SECONDS')
             time.sleep(1)
         tries = 0
     else:
-        os.system('clear')
+        utils.clear()
         print('Incorrect Password')
         time.sleep(2)
         tries += 1

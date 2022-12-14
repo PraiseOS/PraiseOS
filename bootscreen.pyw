@@ -1,7 +1,7 @@
 from rich import *
 from rich.console import Console
 
-import os, time
+import os, time, utils
 
 w, h = os.get_terminal_size()
 
@@ -14,7 +14,7 @@ def cprint(rgb=(255,255,255), text=""):
 for i in range(0,3):
     w, h = os.get_terminal_size()
 
-    os.system('clear')
+    utils.clear()
 
     print('\n'*(h//2-4))
 
@@ -31,6 +31,6 @@ for i in range(0,3):
 
 time.sleep(1)
 
-os.system('clear')
+os.clear()
 
 os.system('python3 bootmanager.pyw')

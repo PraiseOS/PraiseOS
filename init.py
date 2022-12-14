@@ -1,4 +1,4 @@
-import os, time, random, sys, json
+import os, time, random, sys, json, utils
 
 with open('data.json') as f:
     settings = json.load(f)
@@ -16,7 +16,7 @@ if not settings['USED']:
 
 from colorama import Fore, init
 
-os.system('clear')
+utils.clear()
 
 w, h = os.get_terminal_size()
 targets = [

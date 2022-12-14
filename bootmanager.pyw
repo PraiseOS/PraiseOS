@@ -2,7 +2,7 @@ from simple_term_menu import TerminalMenu
 
 from art import tprint
 
-import os
+import os, utils
 
 tprint('PraiseOS')
 
@@ -32,7 +32,7 @@ installations[large_i.index(max(large_i))] = installations[large_i.index(max(lar
 
 choice = installations[TerminalMenu(installations).show()].replace(' - Recommended', '')
 
-os.system('clear')
+utils.clear()
 
 os.chdir(os.getcwd()+f"/installations/{choice}/")
 
