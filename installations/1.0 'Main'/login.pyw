@@ -3,7 +3,7 @@ import getpass, hashlib
 from simple_term_menu import TerminalMenu
 from art import tprint
 
-import os, time, utils
+import os, time, utils, sys
 
 utils.clear()
 
@@ -15,7 +15,15 @@ print('\n\nРⷬrͬaͣiͥs͛eͤOͦS͛ Login Page\n')
 
 print('(HELP): (Use UP and DOWN keys to make a selection. \n Once you are ready, press ENTER to finalise your choice)\n')
 
-urname = os.listdir('../../global/users')[TerminalMenu(os.listdir('../../global/users')).show()]
+users = os.listdir('../../global/users')
+
+users.append('Create New')
+
+urname = users[TerminalMenu(users).show()]
+
+if urname == 'Create New':
+    os.system('python3 setup.pyw')
+    sys.exit()
 
 with open(f'../../global/users/{urname}/.pass') as f:
     paswrd = f.read()
