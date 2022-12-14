@@ -1,6 +1,17 @@
-import os, time, random
+import os, time, random, sys
 
+with open('data.cfg') as f:
+    settings = {}
+    for i in f.readlines():
+        settings[i.split('=')[0]] = i.split('=')[1].replace('\n', '')
 
+if settings['USED'] == "false":
+    if os.name == 'nt':
+        os.system('install.bat')
+        sys.exit()
+    else:
+        os.system('bash install.sh')
+        sys.exit()
 
 from colorama import Fore, init
 
@@ -34,7 +45,6 @@ targets = [
     'O Reached target Local File Systems (Pre).',
     'O Started Flush Journal to Persistent Storage.',
     'O Started udev Kernel Device Manager.',
-    'O Found device Samsung_SSD_850_PRO_512GB SYSTEM.',
     '# Mounting /boot...',
     '# Hello Youtube!'
 ]
@@ -59,4 +69,4 @@ del targets
 
 time.sleep(1)
 
-os.system('python3 bootscreen.pyw')
+os.system(f"python3 bootscreen.pyw {settings['ADMIN']}")

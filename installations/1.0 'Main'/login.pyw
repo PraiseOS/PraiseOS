@@ -20,19 +20,20 @@ urname = os.listdir('../../global/users')[TerminalMenu(os.listdir('../../global/
 with open(f'../../global/users/{urname}/.pass') as f:
     paswrd = f.read()
 
-os.system('clear')
+while True:
+    os.system('clear')
 
-tprint('PraiseOS')
+    tprint('PraiseOS')
 
-print('='*48)
+    print('='*48)
 
-print('\n\nРⷬrͬaͣiͥs͛eͤOͦS͛ Login Page\n')
+    print('\n\nРⷬrͬaͣiͥs͛eͤOͦS͛ Login Page\n')
 
-print(f'(HELP): (Type in the passcode to account "{urname}")\n')
+    print(f'(HELP): (Type in the passcode to account "{urname}")\n')
 
-getpas = getpass.getpass('Passcode ?: ')
+    getpas = getpass.getpass('Passcode ?: ')
 
-encpass = hashlib.sha256(getpas.encode()).hexdigest()
+    encpass = hashlib.sha256(getpas.encode()).hexdigest()
 
-if encpass == paswrd:
-    print('Hello')
+    if encpass == paswrd:
+        break
