@@ -1,11 +1,9 @@
-import os, time, random, sys
+import os, time, random, sys, json
 
-with open('data.cfg') as f:
-    settings = {}
-    for i in f.readlines():
-        settings[i.split('=')[0]] = i.split('=')[1].replace('\n', '')
+with open('data.json') as f:
+    settings = json.load(f)
 
-if settings['USED'] == "false":
+if not settings['USED']:
     if os.name == 'nt':
         os.system('install.bat')
         sys.exit()
