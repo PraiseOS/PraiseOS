@@ -15,7 +15,7 @@ tprint('PraiseOS')
 
 print('='*48)
 
-print('\n\nРⷬrͬaͣiͥs͛eͤOͦS͛ Login Page\n')
+print('\n\nРⷬrͬaͣiͥs͛eͤOͦS͛ LOGIN PAGE\n')
 
 print('(HELP): (Use UP and DOWN keys to make a selection. \n Once you are ready, press ENTER to finalise your choice)\n')
 

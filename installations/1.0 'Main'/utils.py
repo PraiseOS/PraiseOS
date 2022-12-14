@@ -13,5 +13,12 @@ def exec(file):
         os.system(f'python3 {file}')
 
 def read_data():
-    with open('data.json') as f:
+    with open('../../data.json') as f:
         return f.read()
+
+def get_id():
+    id = os.getcwd().split('/')[-1]
+
+    return id
+
+id = get_id()
