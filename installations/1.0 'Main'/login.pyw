@@ -7,7 +7,12 @@ import os, time, utils, sys
 
 utils.clear()
 
-if len(os.listdir('../../global/users/')) == 0:
+try:
+    length = len(os.listdir('../../global/users/'))
+except:
+    length = 0
+
+if length == 0:
     utils.exec('setup.pyw')
     sys.exit()
 

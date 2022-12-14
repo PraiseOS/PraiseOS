@@ -2,6 +2,11 @@ import os, utils, sys, getpass, hashlib
 
 from art import tprint
 
+os.chdir('../../global/')
+
+if not os.path.exists(os.getcwd()+'/users'):
+    os.mkdir('users')
+
 while True:
     utils.clear()
 
@@ -19,13 +24,8 @@ while True:
 
     q = input('\nAre You Sure? (y/n): ')
 
-    if cpas == paswrd and q == 'y':
+    if cpas == paswrd and q == 'y' and not urname in os.listdir('users'):
         break
-
-os.chdir('../../global/')
-
-if not os.path.exists(os.getcwd()+'/users'):
-    os.mkdir('users')
 
 os.chdir('users')
 
@@ -38,4 +38,4 @@ with open(f'{urname}/.pass', 'w') as f:
 
 os.chdir(f'../../installations/{utils.id}')
 
-print(os.getcwd())
+utils.exec('home.pyw')
