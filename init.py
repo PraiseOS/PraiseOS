@@ -4,6 +4,9 @@ with open('data.json') as f:
     settings = json.load(f)
 
 if not settings['USED']:
+    settings['USED'] = True
+    with open('data.json') as f:
+        json.dump(settings)
     if os.name == 'nt':
         os.system('install.bat')
         sys.exit()
