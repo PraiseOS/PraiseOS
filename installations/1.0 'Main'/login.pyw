@@ -59,4 +59,4 @@ while True:
         time.sleep(2)
         tries += 1
 
-utils.exec('home.py')
+utils.exec('home.pyw')
