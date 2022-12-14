@@ -3,7 +3,7 @@ import getpass, hashlib
 from simple_term_menu import TerminalMenu
 from art import tprint
 
-import os
+import os, time
 
 os.system('clear')
 
@@ -19,6 +19,8 @@ urname = os.listdir('../../global/users')[TerminalMenu(os.listdir('../../global/
 
 with open(f'../../global/users/{urname}/.pass') as f:
     paswrd = f.read()
+
+tries = 0
 
 while True:
     os.system('clear')
@@ -37,3 +39,14 @@ while True:
 
     if encpass == paswrd:
         break
+    elif tries == 3:
+        os.system('clear')
+        for i in range(0,15):
+            print(f'NO TRIES LEFT WAIT {15-i} MORE SECONDS')
+            time.sleep(1)
+        tries = 0
+    else:
+        os.system('clear')
+        print('Incorrect Password')
+        time.sleep(2)
+        tries += 1
