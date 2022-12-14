@@ -11,3 +11,7 @@ def exec(file):
         os.system(f'py {file}')
     else:
         os.system(f'python3 {file}')
+
+def read_data():
+    with open('data.json') as f:
+        return f.read()

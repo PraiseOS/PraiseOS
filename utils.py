@@ -1,4 +1,4 @@
-import os
+import os, json
 
 def clear():
     if os.name == 'nt':
@@ -10,4 +10,8 @@ def exec(file):
     if os.name == 'nt':
         os.system(f'py {file}')
     else:
-        os.system(f'python3 {file}')
+        os.system(f'python3 {file}') 
+
+def read_data():
+    with open('data.json') as f:
+        return f.read()

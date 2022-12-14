@@ -7,6 +7,10 @@ import os, time, utils, sys
 
 utils.clear()
 
+if len(os.listdir('../../global/users/')) == 0:
+    utils.exec('setup.pyw')
+    sys.exit()
+
 tprint('PraiseOS')
 
 print('='*48)
