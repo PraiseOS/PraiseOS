@@ -1,8 +1,8 @@
-art==5.8
-colorama==0.4.6
-commonmark==0.9.1
-Pygments==2.13.0
-rich==12.6.0
-simple-term-menu==1.5.2
-tabulate==0.9.0
-tqdm==4.64.1
+art
+colorama
+commonmark
+Pygments
+rich
+simple-term-menu
+tabulate
+tqdm
