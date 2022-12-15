@@ -68,4 +68,4 @@ while True:
         time.sleep(2)
         tries += 1
 
-utils.exec('home.pyw')
+utils.exec(f'home.pyw {urname}')
