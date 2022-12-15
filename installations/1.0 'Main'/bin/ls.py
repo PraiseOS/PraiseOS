@@ -1,7 +1,8 @@
 
 import os, sys
 
-try: sys.argv[1]
-except: os.listdir(); sys.exit();
+def run(dir):
+    try: dir
+    except: os.listdir(); return;
 
-os.listdir(sys.argv[1])
+    os.listdir(sys.argv[1])
