@@ -2,4 +2,5 @@ import sys, os
 
 from commandhandler import check
 
-sys.argv[1]
+while True:
+    check(input(f'{sys.argv[1]}>'), sys.argv[1])
