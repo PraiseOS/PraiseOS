@@ -23,6 +23,8 @@ def check(cmd, usr):
         utils.clear()
     elif cmd.lower().startswith('cd'):
         cd.chdir(cmd)
+    elif cmd.lower().startswith('cat'):
+        cat.run(cmd)
     else:
         if math == 0:print("Command not found run help for list of commands")
         math = 1
