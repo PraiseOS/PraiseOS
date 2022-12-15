@@ -17,8 +17,8 @@ def check(cmd, usr):
                 math = 0
     if cmd.lower() == "":
         pass
-    elif cmd.lower() == "ls":
-        ls.run()
+    elif cmd.lower().startswith('ls'):
+        ls.run(cmd)
     elif cmd.lower() == "cls":
         utils.clear()
     elif cmd.lower().startswith('cd'):

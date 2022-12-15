@@ -37,8 +37,21 @@ def walk_directory(directory: pathlib.Path, tree: Tree) -> None:
             icon = "🐍 " if path.suffix == ".py" or path.suffix == ".pyw" else "📄 "
             tree.add(Text(icon) + text_filename)
 
-def run():
-    directory = os.path.abspath(os.getcwd())
+def run(cmd):
+    try:
+        directory = ''
+
+        dir_list = cmd.replace('"', '').split(' ')
+
+        del dir_list[0]
+
+        for i in dir_list:
+            directory += i
+
+        directory = os.path.abspath(directory)
+
+    except:
+        directory = os.path.abspath(os.getcwd())
 
     tree = Tree(
         f":open_file_folder: [link file://{directory}]{directory.split('/')[-1]}",
