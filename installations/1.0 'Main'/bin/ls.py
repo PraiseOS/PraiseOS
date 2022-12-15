@@ -39,23 +39,18 @@ def walk_directory(directory: pathlib.Path, tree: Tree) -> None:
 
 def run(cmd):
     try:
-        directory = ''
-
-        dir_list = cmd.replace('"', '').split(' ')
-
-        del dir_list[0]
-
-        for i in dir_list:
-            directory += i
-
-        directory = os.path.abspath(directory)
-
+        try:directory = os.path.abspath(cmd.removeprefix('ls ').replace('"', '').removesuffix('ls'))
+        except: pass
     except:
         directory = os.path.abspath(os.getcwd())
 
-    tree = Tree(
-        f":open_file_folder: [link file://{directory}]{directory.split('/')[-1]}",
-        guide_style="bold bright_blue",
-    )
-    walk_directory(pathlib.Path(directory), tree)
-    print(tree)
+    try:
+
+        tree = Tree(
+            f":open_file_folder: [link file://{directory}]{directory.split('/')[-1]}",
+            guide_style="bold bright_blue",
+        )
+        walk_directory(pathlib.Path(directory), tree)
+        print(tree)
+    except:
+        print('Directory does not exist')
