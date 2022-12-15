@@ -1,4 +1,4 @@
-import os, utils, sys, getpass, hashlib
+import os, utils, sys, getpass, hashlib, json
 
 from art import tprint
 
@@ -37,5 +37,15 @@ with open(f'{urname}/.pass', 'w') as f:
     f.write(encpass)
 
 os.chdir(f'../../installations/{utils.id}')
+
+if len(os.listdir('../../global/users/')) == 1:
+    
+    with open('../../data.json', 'r') as f:
+        settings = json.load(f)
+
+        settings['ADMIN'] = urname
+
+    with open('../../data.json', 'w') as f:
+        json.dump(settings, f)
 
 utils.exec('home.pyw')

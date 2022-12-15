@@ -12,7 +12,7 @@ def exec(file):
         os.system(f'py {file}')
     else:
         os.system(f'python3 {file}')
-    clear()
+    #clear()
 
 def read_data():
     with open('../../data.json') as f:
