@@ -10,4 +10,5 @@ def chdir(cmd):
     for i in dir_list:
         dir += i
 
-    os.chdir(dir)
+    try:os.chdir(dir)
+    except:print(f'{dir} does not exist.')
