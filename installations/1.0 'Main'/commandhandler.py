@@ -1,6 +1,6 @@
 from bin import *
 from bin import __all__
-import os, utils
+import os
 
 ops  = ['+', '-', '/', '*', '^', '**']
 cmds = ['file-explorer', 'pkgm-gui', './', 'tree', 'dir', 'ls', 'add-package', 'text-editor']
@@ -17,14 +17,8 @@ def check(cmd, usr):
                 math = 0
     if cmd.lower() == "":
         pass
-    elif cmd.lower().startswith('ls'):
-        ls.run(cmd)
-    elif cmd.lower() == "cls":
-        utils.clear()
-    elif cmd.lower().startswith('cd'):
-        cd.chdir(cmd)
-    elif cmd.lower().startswith('cat'):
-        cat.run(cmd)
+    elif cmd.lower().split(' ')[0] in os.listdir('bin'):
+        exec(f"{cmd.lower().split(' ')[0]}.run(cmd)")
     else:
         if math == 0:print("Command not found run help for list of commands")
         math = 1
