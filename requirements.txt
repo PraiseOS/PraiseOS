@@ -6,3 +6,4 @@ rich
 simple-term-menu
 tabulate
 tqdm
+py-cpuinfo

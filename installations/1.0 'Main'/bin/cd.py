@@ -1,5 +1,7 @@
 import os
 
 def run(cmd):
-    try:os.chdir(cmd.removeprefix('cd ').replace('"', '').removesuffix('cd'))
+    dir = cmd.removeprefix('cd ').replace('"', '').removesuffix('cd')
+
+    try:os.chdir(dir)
     except:print(f'{dir} does not exist.')

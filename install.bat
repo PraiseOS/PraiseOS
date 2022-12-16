@@ -1,4 +1,4 @@
 @echo off
 
 py -m pip install -r requirements.txt
-py setup.py
+py init.py
