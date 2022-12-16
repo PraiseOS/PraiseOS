@@ -1,5 +1,8 @@
 import os
 
+def description():
+    return "Creates A File"
+
 def run(cmd):
     file = cmd.removeprefix('touch ').replace('"', '').removesuffix('touch')
 
