@@ -70,4 +70,4 @@ del targets
 
 time.sleep(1)
 
-utils.exec(f"bootscreen.pyw {settings['ADMIN']}")
+utils.exec(f"bootscreen.pyw")
