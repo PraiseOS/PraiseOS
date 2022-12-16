@@ -1,5 +1,8 @@
 import os
 
+def description():
+    return "Reads The Contents Of A File"
+
 def run(cmd):
 
     file = cmd.removeprefix('cat ').replace('"', '').removesuffix('cat')

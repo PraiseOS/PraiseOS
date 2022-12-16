@@ -8,6 +8,8 @@ from rich.markup import escape
 from rich.text import Text
 from rich.tree import Tree
 
+def description():
+    return "Lists The Contents Of A Directory"
 
 def walk_directory(directory: pathlib.Path, tree: Tree) -> None:
     """Recursively build a Tree with directory contents."""

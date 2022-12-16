@@ -1,5 +1,8 @@
 import os
 
+def description():
+    return "Uses The Python Interpreter To Execute Python Files"
+
 def run(cmd):
     file = cmd.removeprefix('runpy ').replace('"', '').removesuffix('runpy')
 
