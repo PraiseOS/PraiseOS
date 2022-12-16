@@ -9,6 +9,8 @@ bin_list = os.listdir('bin')
 
 del bin_list[bin_list.index('__init__.py')]
 
+del bin_list[bin_list.index('__pycache__')]
+
 def check(cmd, usr):
     math = 0
     for op in ops:
@@ -22,8 +24,10 @@ def check(cmd, usr):
     if cmd.lower() == "":
         pass
     elif cmd.lower() == "help":
+        print()
         for item in bin_list:
-            exec(f'print(\'{item} - \' + {item.replace(".py", "")}.description())')
+            exec(f'print(\'{item.replace(".py", "")} - \' + {item.replace(".py", "")}.description())')
+        print()
     elif cmd.lower().split(' ')[0]+'.py' in bin_list:
         exec(f"{cmd.lower().split(' ')[0].removesuffix('.py')}.run(cmd)")
     else:
