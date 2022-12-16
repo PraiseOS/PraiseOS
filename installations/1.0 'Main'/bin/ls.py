@@ -53,4 +53,4 @@ def run(cmd):
         walk_directory(pathlib.Path(directory), tree)
         print(tree)
     except:
-        print('Directory does not exist')
+        print(f'{directory} does not exist')
