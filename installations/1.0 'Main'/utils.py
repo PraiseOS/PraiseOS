@@ -1,4 +1,4 @@
-import os
+import os, json
 
 def clear():
     if os.name == 'nt':
@@ -16,7 +16,7 @@ def exec(file):
 
 def read_data():
     with open('../../data.json') as f:
-        return f.read()
+        settings = json.load(f)
 
 def get_id():
     id = os.getcwd().split('/')[-1]

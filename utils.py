@@ -7,6 +7,7 @@ def clear():
         os.system('clear')
 
 def exec(file):
+    clear()
     if os.name == 'nt':
         os.system(f'py {file}')
     else:
@@ -14,4 +15,4 @@ def exec(file):
 
 def read_data():
     with open('data.json') as f:
-        return f.read()
+        settings = json.load(f)
