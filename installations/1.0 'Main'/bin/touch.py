@@ -1,4 +1,11 @@
+import os
 
 def run(cmd):
-    with open(cmd.removeprefix('touch ').replace('"', '').removesuffix('touch'), 'w') as f:
+    file = cmd.removeprefix('touch ').replace('"', '').removesuffix('touch')
+
+    if os.path.exists(file):
+        print('File Already Exists')
+        return
+
+    with open(file, 'w') as f:
         pass

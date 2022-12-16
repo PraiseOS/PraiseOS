@@ -7,6 +7,8 @@ cmds = ['file-explorer', 'pkgm-gui', './', 'tree', 'dir', 'ls', 'add-package', '
 
 bin_list = os.listdir('bin')
 
+del bin_list[bin_list.index('__init__.py')]
+
 def check(cmd, usr):
     math = 0
     for op in ops:
@@ -19,6 +21,9 @@ def check(cmd, usr):
                 math = 0
     if cmd.lower() == "":
         pass
+    elif cmd.lower() == "help":
+        for item in bin_list:
+            exec(f'print(\'{item} - \' + {item.replace(".py", "")}.description())')
     elif cmd.lower().split(' ')[0]+'.py' in bin_list:
         exec(f"{cmd.lower().split(' ')[0].removesuffix('.py')}.run(cmd)")
     else:
