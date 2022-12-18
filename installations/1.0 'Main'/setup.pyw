@@ -48,4 +48,4 @@ if len(os.listdir('../../global/users/')) == 1:
     with open('../../data.json', 'w') as f:
         json.dump(settings, f)
 
-utils.exec(f'home.pyw {urname}')
+utils.exec(f'home.pyw {urname} {encpass}')

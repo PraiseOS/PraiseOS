@@ -1,6 +1,6 @@
 import getpass, hashlib
 
-from simple_term_menu import TerminalMenu
+from pick import pick
 from art import tprint
 
 import os, time, utils, sys
@@ -28,7 +28,9 @@ users = os.listdir('../../global/users')
 
 users.append('Create New')
 
-urname = users[TerminalMenu(users).show()]
+time.sleep(3)
+
+urname = users[pick(users, indicator='>')[1]]
 
 if urname == 'Create New':
     utils.exec('setup.pyw')
@@ -68,4 +70,4 @@ while True:
         time.sleep(2)
         tries += 1
 
-utils.exec(f'home.pyw {urname}')
+utils.exec(f'home.pyw {urname} {encpass}')

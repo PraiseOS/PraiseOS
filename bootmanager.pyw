@@ -1,8 +1,8 @@
-from simple_term_menu import TerminalMenu
+from pick import pick
 
 from art import tprint
 
-import os, utils
+import os, utils, time
 
 tprint('PraiseOS')
 
@@ -30,7 +30,9 @@ for i in installations:
 
 installations[large_i.index(max(large_i))] = installations[large_i.index(max(large_i))] + ' - Recommended'
 
-choice = installations[TerminalMenu(installations).show()].replace(' - Recommended', '')
+time.sleep(3)
+
+choice = installations[pick(installations, indicator='>')[1]].replace(' - Recommended', '')
 
 utils.clear()
 

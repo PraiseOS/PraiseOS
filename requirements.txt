@@ -3,7 +3,7 @@ colorama
 commonmark
 Pygments
 rich
-simple-term-menu
+pick
 tabulate
 tqdm
 py-cpuinfo
