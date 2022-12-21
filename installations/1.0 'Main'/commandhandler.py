@@ -17,7 +17,7 @@ def check(cmd, usr):
         if op in cmd:
             try:
                 math = 1
-                exec(f'print(str({cmd}).split(\'.\')[0])')
+                exec(f'print(str({cmd}).split(\'.\')[0])', {})
                 break
             except (NameError, SyntaxError):
                 math = 0
