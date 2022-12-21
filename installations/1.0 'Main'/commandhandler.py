@@ -26,10 +26,10 @@ def check(cmd, usr):
     elif cmd.lower() == "help":
         print()
         for item in bin_list:
-            exec(f'print(\'{item.replace(".py", "")} - \' + {item.replace(".py", "")}.description())')
+            exec(f'from bin import *; from bin import __all__; print(\'{item.replace(".py", "")} - \' + {item.replace(".py", "")}.description())', {'cmd': cmd})
         print()
     elif cmd.lower().split(' ')[0]+'.py' in bin_list:
-        exec(f"{cmd.lower().split(' ')[0].removesuffix('.py')}.run(cmd)")
+        exec(f"from bin import *; from bin import __all__; {cmd.lower().split(' ')[0].removesuffix('.py')}.run(cmd)", {'cmd': cmd})
     else:
         if math == 0:print("Command not found run help for list of commands")
         math = 1

@@ -3,10 +3,10 @@ import sys, os, socket
 from colorama import Fore, init
 from commandhandler import check
 
-with open(f'{sys.argv[0]}/.pass') as f:
+with open(f'../../global/users/{sys.argv[1]}/.pass') as f:
     paswrd = f.read()
 
-if not sys.argv[1] == paswrd:
+if not sys.argv[2] == paswrd:
     sys.exit()
 
 init()
