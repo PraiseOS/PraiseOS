@@ -36,7 +36,7 @@ encpass = hashlib.sha256(paswrd.encode()).hexdigest()
 with open(f'{urname}/.pass', 'w') as f:
     f.write(encpass)
 
-os.chdir(f'../../installations/{utils.id}')
+os.chdir(utils.id)
 
 if len(os.listdir('../../global/users/')) == 1:
     
