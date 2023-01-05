@@ -1,4 +1,4 @@
-import sys, os, socket
+import sys, os, socket, utils
 
 from colorama import Fore, init
 from commandhandler import check
@@ -13,4 +13,4 @@ init()
 
 while True:
     try: check(input(f'{Fore.RED}{sys.argv[1]}@{socket.gethostname()}: {os.getcwd()}>{Fore.WHITE}'), sys.argv[1]) 
-    except (KeyboardInterrupt): pass
+    except (KeyboardInterrupt): utils.clear(); sys.exit();
