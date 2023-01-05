@@ -2,7 +2,7 @@
 
 <br>
 
-Praise is a new Python VOS that is currently in the works to become the best VOS out there!
+PraiseOS is a new Python VOS that is currently in the works to become the best VOS out there!
 
 # Requirements
 
