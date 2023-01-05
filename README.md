@@ -16,7 +16,7 @@ PraiseOS is a new Python VOS that is currently in the works to become the best V
 
 First, open your terminal and type:
 
-`git https://github.com/Physicio/PraiseOS && cd PraiseOS`
+`git https://github.com/PraiseOS/PraiseOS && cd PraiseOS`
 
 Then,
 
