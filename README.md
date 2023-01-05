@@ -32,4 +32,4 @@ Join our community Discord server at https://discord.gg/APShCZua to get instant 
 
 # Feedback
 
-You can submit feedback on our Discord server.
+You can submit feedback on our Discord server or at praisedevteam@gmail.com.
