@@ -1,4 +1,4 @@
-import sys, os, socket, utils
+import sys, os, socket, utils, hashlib
 
 from colorama import Fore, init
 from commandhandler import check
@@ -6,7 +6,9 @@ from commandhandler import check
 with open(f'../../global/users/{sys.argv[1]}/.pass') as f:
     paswrd = f.read()
 
-if not sys.argv[2] == paswrd:
+encpass = hashlib.sha256(sys.argv[2].encode()).hexdigest()
+
+if not encpass == paswrd:
     sys.exit()
 
 init()
