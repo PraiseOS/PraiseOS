@@ -7,12 +7,11 @@ if not settings['USED']:
     settings['USED'] = True
     with open('data.json', 'w') as f:
         json.dump(settings, f)
-    if os.name == 'nt':
-        os.system('install.bat')
-        sys.exit()
-    else:
-        os.system('bash install.sh')
-        sys.exit()
+    
+    os.system('install.bat' if os.name == 'nt' \
+        else 'bash install.sh')
+
+    sys.exit()
 
 from colorama import Fore, init
 
