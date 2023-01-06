@@ -1,4 +1,4 @@
-<img width="90px" align="left" src="Praise.ico">
+<img width="90px" align="left" src="favicon.ico">
 
 # PraiseOS
 
