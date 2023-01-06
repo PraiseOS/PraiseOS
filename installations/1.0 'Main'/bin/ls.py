@@ -50,6 +50,8 @@ def run(cmd):
         for item in os.listdir():
             print(item)
 
+        return
+
     try:
         try:directory = os.path.abspath(cmd.removeprefix('ls ').replace('"', '').removesuffix('ls'))
         except: pass
