@@ -1,8 +1,6 @@
-<img width="90px" align="left" src="https://photos.app.goo.gl/brrmcCjKHTrXwDHZ9">
+<img width="90px" align="left" src="Praise.ico">
 
 # PraiseOS
-
-<br>
 
 PraiseOS is a new Python VOS that is currently in the works to become the best VOS out there!
 
