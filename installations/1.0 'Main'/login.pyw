@@ -70,4 +70,4 @@ while True:
         time.sleep(2)
         tries += 1
 
-utils.exec(f'home.pyw {urname} {encpass}')
+utils.exec(f'home.pyw {urname} {getpas}')

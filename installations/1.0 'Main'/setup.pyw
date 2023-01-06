@@ -31,6 +31,8 @@ os.chdir('users')
 
 os.mkdir(urname)
 
+os.mkdir(f'{urname}/main')
+
 encpass = hashlib.sha256(paswrd.encode()).hexdigest()
 
 with open(f'{urname}/.pass', 'w') as f:
@@ -48,4 +50,4 @@ if len(os.listdir('../../global/users/')) == 1:
     with open('../../data.json', 'w') as f:
         json.dump(settings, f)
 
-utils.exec(f'home.pyw {urname} {encpass}')
+utils.exec(f'home.pyw {urname} {paswrd}')

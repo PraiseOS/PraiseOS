@@ -19,7 +19,7 @@ def read_data():
         settings = json.load(f)
 
 def get_id():
-    id = os.getcwd().split('/')[-1]
+    id = os.getcwd()#.split('/')[-1]
 
     return id
 
