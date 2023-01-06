@@ -1,3 +1,5 @@
+<img width="90px" align="left" src="https://photos.app.goo.gl/brrmcCjKHTrXwDHZ9">
+
 # PraiseOS
 
 <br>
