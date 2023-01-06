@@ -40,6 +40,16 @@ def walk_directory(directory: pathlib.Path, tree: Tree) -> None:
             tree.add(Text(icon) + text_filename)
 
 def run(cmd):
+    if not '--tree' in cmd.split(' ')[-1]:
+        try:
+            try:directory = os.path.abspath(cmd.removeprefix('ls ').replace('"', '').removesuffix('ls'))
+            except: pass
+        except:
+            directory = os.path.abspath(os.getcwd())
+
+        for item in os.listdir():
+            print(item)
+
     try:
         try:directory = os.path.abspath(cmd.removeprefix('ls ').replace('"', '').removesuffix('ls'))
         except: pass
